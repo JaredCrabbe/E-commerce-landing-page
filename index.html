@@ -60,24 +60,35 @@
         <div class="my-12">
             <h2 class=" text-center md:text-left text-2xl md:text-5xl font-bold">NEW ARRIVALS</h2>
         <div id="card-container" class="md:grid grid-cols-4 gap-5 ">
-            <div class="card w-2/3 my-20 mx-auto md:w-full h-96 bg-[url('./imgs/summerwear.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
-                <h3 class="relative top-full text-center md:text-left text-lg font-bold mt-2">Summer Wear!</h3> 
-                <p class="relative top-full text-center text-md md:text-left font-thin">explore now!</p>
+            <div class="group/summer card w-2/3 my-20 mx-auto md:w-full h-96 bg-[url('./imgs/summerwear.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
+                <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 hover:backdrop-blur transition-all flex justify-center items-center">
+                    <p class="invisible group-hover/summer:visible text-white text-lg uppercase">Shop Now</p>
+                </div>
+                <h3 class=" block  top-full text-center md:text-left text-lg font-bold mt-2 group-hover/summer:translate-x-5 transition-transform">Summer Wear!</h3> 
+                <p class=" top-full text-center text-md md:text-left font-thin">explore now!</p>
                 
             </div>
-            <div class="card w-2/3 mx-auto my-20 md:w-full h-96 bg-[url('./imgs/Swimwear.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer  ">
-                <h3 class="relative top-full text-center md:text-left text-lg font-bold mt-2 hover:translate-x-5">Swim Wear</h3>
-                <p class="relative top-full text-center text-md md:text-left font-thin ">explore now!</p> 
-
+            <div class="group/swimwear card w-2/3 mx-auto my-20 md:w-full h-96 bg-[url('./imgs/Swimwear.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer  ">
+            <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 hover:backdrop-blur transition-all flex justify-center items-center">
+                <p class="invisible group-hover/swimwear:visible text-white text-lg uppercase">Shop Now</p>
             </div>
-            <div class="card w-2/3 mx-auto md:w-full my-20 h-96 bg-[url('./imgs/sundresses.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
-                <h3 class="relative top-full text-center md:text-left text-lg font-bold">Dresses</h3>
-                <p class="relative top-full text-center text-md md:text-left font-thin">explore now!</p> 
+                <h3 class=" top-full text-center md:text-left text-lg font-bold mt-2 group-hover/swimwear:translate-x-5 transition-transform">Swim Wear</h3>
+                <p class=" top-full text-center text-md md:text-left font-thin ">explore now!</p> 
+            </div>
+            <div class="group/dresses card w-2/3 mx-auto md:w-full my-20 h-96 bg-[url('./imgs/sundresses.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
+                <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 hover:backdrop-blur transition-all flex justify-center items-center">
+                    <p class="invisible group-hover/dresses:visible text-white text-lg uppercase">Shop Now</p>
+                </div>
+                <h3 class=" top-full text-center md:text-left text-lg font-bold group-hover/dresses:translate-x-5 transition-transform">Dresses</h3>
+                <p class=" top-full text-center text-md md:text-left font-thin">explore now!</p> 
                 
             </div>
-            <div class="card w-2/3 mx-auto md:w-full my-20 h-96 bg-[url('./imgs/model-career-kit-still-life_23-2150229753.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
-                <h3 class="relative top-full text-center md:text-left text-lg font-bold">Accessories</h3>
-                <p class="relative top-full text-center text-md md:text-left font-thin">explore now!</p> 
+            <div class="group/accessories card w-2/3 mx-auto md:w-full my-20 h-96 bg-[url('./imgs/model-career-kit-still-life_23-2150229753.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
+                <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 hover:backdrop-blur transition-all flex justify-center items-center">
+                    <p class="invisible group-hover/accessories:visible text-white text-lg uppercase">Shop Now</p>
+                </div>
+                <h3 class=" top-full text-center md:text-left text-lg font-bold group-hover/accessories:translate-x-5 transition-transform">Accessories</h3>
+                <p class=" top-full text-center text-md md:text-left font-thin">explore now!</p> 
                 
             </div>
         </div>
@@ -102,28 +113,37 @@
     <div class="container mx-auto text-center md:text-left my-32">
         <h4 class="text-2xl font-bold md:text-5xl my-20">Our Items!</h4>  
     <div class="block md:grid md:grid-cols-2 gap-10 my-10">
-        <div><img src="./imgs/Rectangle 49.png" alt="">
-            <h4 class="text-center md:text-left text-lg font-bold mt-2">Trending</h4>
-            <p class="text-center text-md md:text-left font-thin">explore now</p>
-        </div>
-        <div><img src="./imgs/Rectangle 50.png" alt="">
+        <div class="relative group">
+            <img src="./imgs/Rectangle 49.png" alt="" class="w-full group-hover:blur-md">
+            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+                <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
+            </div>
             <h4 class="text-center md:text-left text-lg font-bold mt-2">under $40</h4>
             <p class="text-center text-md md:text-left font-thin">explore now</p>
         </div>
+        <div class="relative group">
+            <img src="./imgs/Rectangle 50.png" alt="" class="w-full group-hover:blur-md ">
+            <div class="absolute inset-0 bg-black opacity-0  group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+                <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
+            </div>
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">under $40</h4>
+            <p class="text-center text-md md:text-left font-thin">explore now</p>
+        </div>
+        
     </div>
     </section>
     <section id="call-to-action" class="">
-        <div class="grid container mx-auto grid-cols-2">
-            <div class="my-44">
+        <div class="text-center md:grid container mx-auto md:grid-cols-2">
+            <div class="my-44 md:pl-20">
             <h5 class="text-2xl md:text-5xl font-bold mb-10">DOWNLOAD APP &
                 <br>
                 GET THE VOUCHER!
             </h5>
             <p class="">Get 30% off for first transaction using <br>
                 Rondovision mobile app for now.</p>
-                <div class="flex mt-10">
-                    <img src="./imgs/Rectangle 18.png" alt="">
-                    <img src="./imgs/Rectangle 55.png" class=" ml-5" alt="">
+                <div class="flex flex-col md:flex-row justify-center items-center mt-10">
+                    <img src="./imgs/Rectangle 18.png" alt="" class="hover:cursor-pointer hover:-translate-y-3 transition-all">
+                    <img src="./imgs/Rectangle 55.png" class="mt-5 md:ml-5 md:mt-0 hover:cursor-pointer hover:-translate-y-3 transition-all" alt="">
                 </div>
         </div>
         <div class=" hidden lg:block h-full bg-white max-h-[710px] w-[328px] mx-auto border-t-[20px] border-l-[20px] border-b-[20px] border-r-[20px] rounded-[50px] pb-4">
@@ -158,7 +178,7 @@
                 <img src="./imgs/charming-slim-brunette-woman-pin-up-dress-coquettishly-raised-her-leg-isolated-wall.png" alt="">
             </div>
         </div>
-            <div class="bg-white h-16 relative w-full z-10 grid grid-cols-4 rounded-b-[50px] -translate-y-2">
+            <div class="bg-white h-16 relative w-full z-10 grid grid-cols-4 rounded-b-[50px] -translate-y-[20px]">
             <div class="flex items-center justify-center max-h-[55px]">
                 <i class="fa-solid fa-house"></i>
             </div>
@@ -179,16 +199,17 @@
         
     </div>
     </section>
-    <section class="bg-yellow-400 text-center p-10 mt-10">
+    <section class="bg-yellow-400 text-center p-10 mt-10 flex flex-col items-center">
         <div class="container mx-auto text-center max-w-[970px]">
         <h6 class="text-5xl my-10">Join our community to get a monthly promo code</h6>
         <p class="text-xl mb-10">Enter your email down below to join! <br>and reap the rewards for years to come</p>
-        <input type="text" class="py-3 px-5 w-1/2 ml-20 rounded-lg">
-        <button class="relative bg-black text-xl -left-20 font-bold text-white pt-2 pb-3 px-3 rounded-r-lg hover:text-opacity-80">SEND</button>
+        <input type="text" class="py-3 px-5 md:w-1/2 sm:ml-20 md:ml-20 rounded-lg">
+        <button class="relative bg-black text-xl md:-left-20 font-bold text-white pt-2 pb-3 px-3 md:rounded-r-lg hover:text-opacity-80 rounded-lg mt-5 md:mt-0">SEND</button>
     </div>
     </section>
-    <footer class="bg-black h-[400px] w-full grid auto-cols-max grid-flow-col text-white p-10">
-       <div class="flex justify-center flex-col p-10">
+    <footer class="bg-black w-full lg:grid auto-cols-max grid-flow-col text-white p-10 gap-x-10 ">
+
+       <div class="flex justify-center flex-col p-10 ">
         <h2 class="text-white lg:text-5xl font-bold text-2xl ">Fashion</h2>
         <p class="text-white text-lg">Complete your style with our awesome clothes!</p>
     <div class="mt-10">
@@ -198,7 +219,8 @@
         <i class="fa-brands fa-tiktok bg-yellow-300 p-3 rounded-lg text-black"></i>
     </div>
        </div>
-    <div class="flex flex-col justify-center ml-[500px]">
+
+    <div class="flex flex-col justify-center lg:ml-[50%] mt-14 md:mt-0 p-10">
         <h6 class="text-lg">Company</h6>
         <ul class="text-sm list-none pt-5 text-slate-300">
             <a href="#"><li class="opacity-80 hover:opacity-100">About</li></a>
@@ -207,7 +229,7 @@
             <a href="#"><li class="opacity-80 hover:opacity-100">Careers</li></a>
         </ul>
     </div>
-    <div class="flex flex-col justify-center ml-44">
+    <div class="flex flex-col justify-center mt-14 md:mt-0 p-10">
         <h6 class="text-lg">Quick links</h6>
         <ul class="text-sm list-none pt-5 text-slate-300">
             <a href="#"><li class="opacity-80 hover:opacity-100">Size Guide</li></a>
@@ -216,7 +238,7 @@
             <a href="#"><li class="opacity-80 hover:opacity-100">Shipping calculator</li></a>
         </ul>
     </div>
-       <div class="flex flex-col ml-44 mt-24">
+       <div class="flex flex-col mt-4 p-10">
         <h6 class="text-lg">legal</h6>
         <ul class="text-sm list-none pt-5 text-slate-300">
             <a href="#"><li class="opacity-80 hover:opacity-100">Terms & conditions</li></a>
