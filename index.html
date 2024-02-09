@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <script src="./index.js" defer></script>
     <script src="https://kit.fontawesome.com/64719ba10e.js" crossorigin="anonymous"></script>
     <title>E-commerce website</title>
 </head>
 <body>
 <hero>
-    <header class="container mx-auto p-4">
-    <div class="flex justify-between items-center">
-    <div>
-        Shopify
-    </div>
-    <ul class="flex justify-around items-center">
-        <a href="#" class="hover:opacity-80"><li>catalogue</li></a>
-        <a href="#" class="hover:opacity-80"><li class="ml-5">fashion</li></a>
-        <a href="#" class="hover:opacity-80"><li class="ml-5">favourite</li></a>
-        <a href="#" class="hover:opacity-80"><li class="ml-5">lifestyle</li></a>
+    <header id="header" class="p-4 sm:sticky sm:top-0 bg-white sm:z-10 shadow-gray-400 shadow ">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="text-1xl bg-yellow-400 p-2 -skew-y-2">
+            <a href="#">RondoVision</a>
+        </div>
+        <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+            &#9776;
+        </button>
+    <ul class="hidden md:flex justify-around items-center">
+        <a href="#catalogue" class="hover:opacity-80"><li>catalogue</li></a>
+        <a href="#new-arrivals" class="hover:opacity-80"><li class="ml-5">fashion</li></a>
+        <a href="#call-to-action" class="hover:opacity-80"><li class="ml-5">Download</li></a>
         <a href="#"><li class="ml-5 bg-black text-white p-2 text-center rounded-lg hover:text-yellow-400" >Sign Up</li></a>
     </ul>
 </div>
     </header>
-        <div class="bg-slate-100 container mx-auto rounded-md flex lg:justify-between max-h-[970px] md:justify-around md:items-end overflow-hidden ">
+    <section id="mobile-menu" class="z-10 sticky top-0 bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden">
+        <button class="text-8xl self-end px-5 text-white">
+            &times;
+        </button>
+        <nav class="flex flex-col min-h-screen items-center py-6" aria-label="mobile">
+            <a href="#catalogue" class="text-white text-5xl hover:opacity-70">catalogue</a>
+            <a href="#new-arrivals" class="text-white text-5xl hover:opacity-70">fashion</a>
+            <a href="#call-to-action" class="text-white text-5xl hover:opacity-70">Download</a>
+            <a href="" class="text-black text-2xl mt-10 bg-white p-2 text-center rounded-md hover:bg-yellow-400 hover:text-white">Sign Up</a>
+
+        </nav>
+    </section>
+        <div class=" my-10 bg-slate-100 container mx-auto rounded-md flex lg:justify-between max-h-[970px] md:justify-around md:items-end overflow-hidden ">
             <div class="p-8 w-full lg:ml-20 mx-auto flex flex-col justify-center items-center lg:block" id="hero-content">
-                <div class="bg-cyan-400 -rotate-2 p-1 font-bold md:text-8xl text-5xl max-w-72 mx-2">LET'S</div>
+                <div class="bg-cyan-400 -skew-x-2 p-1 font-bold md:text-8xl text-5xl max-w-72 mx-2">LET'S</div>
                 <div class="my-4 font-bold md:text-8xl text-5xl">EXPLORE</div>
-                <div class="bg-yellow-400 -rotate-2 p-1 font-bold md:text-8xl text-5xl max-w-96 mx-2">UNIQUE</div>
+                <div class="bg-yellow-400 z-0 -skew-x-2 p-1 font-bold md:text-8xl text-5xl max-w-96 mx-2">UNIQUE</div>
                 <div class="my-4 font-bold md:text-8xl text-5xl">CLOTHES!</div>
                 <p class="text-lg text-center sm:text-left">Live for influential and innovative fashion!</p>
                 <button class="bg-black text-white p-2 my-6 font-bold text-2xl md:mx-0 sm:mx-0 hover:text-yellow-400">SHOP NOW!</button>
@@ -109,7 +124,7 @@
         </div>
     </div>
     </section>
-    <section id="our-items" class="">
+    <section id="catalogue" class="">
     <div class="container mx-auto text-center md:text-left my-32">
         <h4 class="text-2xl font-bold md:text-5xl my-20">Our Items!</h4>  
     <div class="block md:grid md:grid-cols-2 gap-10 my-10">
@@ -207,20 +222,19 @@
         <button class="relative bg-black text-xl md:-left-20 font-bold text-white pt-2 pb-3 px-3 md:rounded-r-lg hover:text-opacity-80 rounded-lg mt-5 md:mt-0">SEND</button>
     </div>
     </section>
-    <footer class="bg-black w-full lg:grid auto-cols-max grid-flow-col text-white p-10 gap-x-10 ">
-
+    <footer class="bg-black w-full lg:grid grid-cols-[2fr, 1fr, 1fr, 1fr] grid-flow-col text-white p-10 gap-x-10 ">
        <div class="flex justify-center flex-col p-10 ">
         <h2 class="text-white lg:text-5xl font-bold text-2xl ">Fashion</h2>
         <p class="text-white text-lg">Complete your style with our awesome clothes!</p>
     <div class="mt-10">
-        <i class="fa-brands fa-facebook bg-yellow-300  p-3 rounded-lg text-black"></i>
-        <i class="fa-brands fa-instagram bg-yellow-300 p-3 rounded-lg text-black"></i>
-        <i class="fa-brands fa-twitter bg-yellow-300 p-3 rounded-lg text-black"></i>
-        <i class="fa-brands fa-tiktok bg-yellow-300 p-3 rounded-lg text-black"></i>
+        <i class="fa-brands fa-facebook bg-yellow-300  p-3 rounded-lg hover:text-white hover:cursor-pointer  text-black"></i>
+        <i class="fa-brands fa-instagram bg-yellow-300 p-3 rounded-lg hover:text-white hover:cursor-pointer text-black"></i>
+        <i class="fa-brands fa-twitter bg-yellow-300 p-3 rounded-lg hover:text-white hover:cursor-pointer text-black"></i>
+        <i class="fa-brands fa-tiktok bg-yellow-300 p-3 rounded-lg hover:text-white hover:cursor-pointer text-black"></i>
     </div>
        </div>
 
-    <div class="flex flex-col justify-center lg:ml-[50%] mt-14 md:mt-0 p-10">
+    <div class="flex flex-col justify-center mt-14 md:mt-0 p-10">
         <h6 class="text-lg">Company</h6>
         <ul class="text-sm list-none pt-5 text-slate-300">
             <a href="#"><li class="opacity-80 hover:opacity-100">About</li></a>
