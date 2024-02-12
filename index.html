@@ -19,10 +19,10 @@
             &#9776;
         </button>
     <ul class="hidden md:flex justify-around items-center">
-        <a href="#catalogue" class="hover:opacity-80"><li>catalogue</li></a>
-        <a href="#new-arrivals" class="hover:opacity-80"><li class="ml-5">fashion</li></a>
-        <a href="#call-to-action" class="hover:opacity-80"><li class="ml-5">Download</li></a>
-        <a href="#"><li class="ml-5 bg-black text-white p-2 text-center rounded-lg hover:text-yellow-400" >Sign Up</li></a>
+        <a href="#catalogue" class="hover:opacity-80 active:opacity-80"><li>catalogue</li></a>
+        <a href="#new-arrivals" class="hover:opacity-80 active:opacity-80"><li class="ml-5">fashion</li></a>
+        <a href="#call-to-action" class="hover:opacity-80 active:opacity-80"><li class="ml-5">Download</li></a>
+        <a href="#"><li class="ml-5 bg-black text-white p-2 text-center rounded-lg hover:text-yellow-400 active:text-yellow-400" >Sign Up</li></a>
     </ul>
 </div>
     </header>
@@ -31,10 +31,10 @@
             &times;
         </button>
         <nav class="flex flex-col min-h-screen items-center py-6" aria-label="mobile">
-            <a href="#catalogue" class="text-white text-5xl hover:opacity-70">catalogue</a>
-            <a href="#new-arrivals" class="text-white text-5xl hover:opacity-70">fashion</a>
-            <a href="#call-to-action" class="text-white text-5xl hover:opacity-70">Download</a>
-            <a href="" class="text-black text-2xl mt-10 bg-white p-2 text-center rounded-md hover:bg-yellow-400 hover:text-white">Sign Up</a>
+            <a href="#catalogue" class="text-white text-5xl hover:opacity-70 active:opacity-70">catalogue</a>
+            <a href="#new-arrivals" class="text-white text-5xl hover:opacity-70 active:opacity-70">fashion</a>
+            <a href="#call-to-action" class="text-white text-5xl hover:opacity-70 active:opacity-70">Download</a>
+            <a href="" class="text-black text-2xl mt-10 bg-white p-2 text-center rounded-md hover:bg-yellow-400 hover:text-white active:bg-yellow-400 active:text-white">Sign Up</a>
 
         </nav>
     </section>
@@ -45,7 +45,7 @@
                 <div class="bg-yellow-400 z-0 -skew-x-2 p-1 font-bold md:text-8xl text-5xl max-w-96 mx-2">UNIQUE</div>
                 <div class="my-4 font-bold md:text-8xl text-5xl">CLOTHES!</div>
                 <p class="text-lg text-center sm:text-left">Live for influential and innovative fashion!</p>
-                <button class="bg-black text-white p-2 my-6 font-bold text-2xl md:mx-0 sm:mx-0 hover:text-yellow-400">SHOP NOW!</button>
+                <button class="bg-black text-white p-2 my-6 font-bold text-2xl md:mx-0 sm:mx-0 hover:text-yellow-400 active:text-yellow-400">SHOP NOW!</button>
             </div>
             <div class="w-5/6 hidden lg:flex lg:mr-20  items-end" id="hero-img">
                 <img class="" src="./imgs/incendiary-fantastically-beautiful-girl-coat-eco-fur-moves-fun-picture-lovely-lady-pink-clothes-removebg-preview 1.png" >
@@ -76,7 +76,7 @@
             <h2 class=" text-center md:text-left text-2xl md:text-5xl font-bold">NEW ARRIVALS</h2>
         <div id="card-container" class="md:grid grid-cols-4 gap-5 ">
             <div class="group/summer card w-2/3 my-20 mx-auto md:w-full h-96 bg-[url('./imgs/summerwear.jpg')] bg-cover bg-center rounded-md hover:cursor-pointer">
-                <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 hover:backdrop-blur transition-all flex justify-center items-center">
+                <div class="rounded-md w-full h-full relative hover:backdrop-brightness-50 active:backdrop-brightness-50 active:backdrop-blur hover:backdrop-blur transition-all flex justify-center items-center">
                     <p class="invisible group-hover/summer:visible text-white text-lg uppercase">Shop Now</p>
                 </div>
                 <h3 class=" block  top-full text-center md:text-left text-lg font-bold mt-2 group-hover/summer:translate-x-5 transition-transform">Summer Wear!</h3> 
@@ -127,24 +127,50 @@
     <section id="catalogue" class="">
     <div class="container mx-auto text-center md:text-left my-32">
         <h4 class="text-2xl font-bold md:text-5xl my-20">Our Items!</h4>  
-    <div class="block md:grid md:grid-cols-2 gap-10 my-10">
-        <div class="relative group">
-            <img src="./imgs/Rectangle 49.png" alt="" class="w-full group-hover:blur-md">
-            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+    <div class="flex gap-5 my-10 overflow-hidden relative carousel-wrapper">
+        <div class="carousel-button--next absolute top-1/2 right-0 z-10" id="next"><i class="fa-solid fa-arrow-right fa-2xl"></i></div>
+        <div class="carousel-button--prev absolute top-1/2 z-10" id="prev"><i class="fa-solid fa-arrow-left fa-2xl"></i></div>
+        <div class="relative group shrink-0 carousel-card transition-all  w-full md:w-1/2">
+            <img src="./imgs/Rectangle 49.png" alt="" class="w-full" data-active>
+            <!-- <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
                 <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
-            </div>
-            <h4 class="text-center md:text-left text-lg font-bold mt-2">under $40</h4>
+            </div> -->
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">Pic one</h4>
             <p class="text-center text-md md:text-left font-thin">explore now</p>
         </div>
-        <div class="relative group">
-            <img src="./imgs/Rectangle 50.png" alt="" class="w-full group-hover:blur-md ">
-            <div class="absolute inset-0 bg-black opacity-0  group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+        <div class="relative group shrink-0 carousel-card transition-all w-full md:w-1/2">
+            <img src="./imgs/Rectangle 50.png" alt="" class="w-full">
+            <!-- <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
                 <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
-            </div>
-            <h4 class="text-center md:text-left text-lg font-bold mt-2">under $40</h4>
+            </div> -->
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">Pic two</h4>
             <p class="text-center text-md md:text-left font-thin">explore now</p>
         </div>
-        
+        <div class="relative group shrink-0 carousel-card transition-all w-full md:w-1/2">
+            <img src="./imgs/Rectangle 49.png" alt="" class="w-full">
+            <!-- <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+                <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
+            </div> -->
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">Pic three</h4>
+            <p class="text-center text-md md:text-left font-thin">explore now</p>
+        </div>
+        <div class="relative group shrink-0 carousel-card transition-all w-full md:w-1/2">
+            <img src="./imgs/Rectangle 50.png" alt="" class="w-full">
+            <!-- <div class="absolute inset-0 bg-black opacity-0  group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+                <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
+            </div> -->
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">Pic four</h4>
+            <p class="text-center text-md md:text-left font-thin">explore now</p>
+        </div>
+        <div class="relative group shrink-0 carousel-card transition-all w-full md:w-1/2">
+            <img src="./imgs/Rectangle 50.png" alt="" class="w-full">
+            <!-- <div class="absolute inset-0 bg-black opacity-0  group-hover:opacity-50 transition duration-500 h-full w-full max-h-[230px] lg:max-h-[515px] rounded-xl flex justify-center items-center hover:cursor-pointer">
+                <p class="uppercase text-lg text-white font-bold">Shop NOW!</p>
+            </div> -->
+            <h4 class="text-center md:text-left text-lg font-bold mt-2">Pic five</h4>
+            <p class="text-center text-md md:text-left font-thin">explore now</p>
+        </div>
+
     </div>
     </section>
     <section id="call-to-action" class="">
