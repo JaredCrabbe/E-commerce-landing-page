@@ -606,28 +606,12 @@ video {
   top: 0px;
 }
 
-.top-full {
-  top: 100%;
-}
-
-.right-full {
-  right: 100%;
-}
-
 .top-1\/2 {
   top: 50%;
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.left-full {
-  left: 100%;
-}
-
-.-top-full {
-  top: -100%;
+.top-full {
+  top: 100%;
 }
 
 .z-0 {
@@ -736,14 +720,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -839,10 +815,6 @@ video {
 
 .shrink-0 {
   flex-shrink: 0;
-}
-
-.shrink {
-  flex-shrink: 1;
 }
 
 .origin-top {
@@ -943,10 +915,6 @@ video {
   justify-content: space-around;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
@@ -964,10 +932,6 @@ video {
   align-self: flex-end;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -978,6 +942,10 @@ video {
 
 .rounded-\[50px\] {
   border-radius: 50px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1336,6 +1304,10 @@ video {
   color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
+.active\:opacity-50:active {
+  opacity: 0.5;
+}
+
 .active\:opacity-70:active {
   opacity: 0.7;
 }
@@ -1392,8 +1364,18 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:translate-x-7 {
+  --tw-translate-x: 1.75rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:opacity-50 {
   opacity: 0.5;
+}
+
+.group:hover .group-hover\:blur-sm {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 640px) {
@@ -1467,14 +1449,6 @@ video {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:shrink {
-    flex-shrink: 1;
-  }
-
-  .md\:shrink-0 {
-    flex-shrink: 0;
   }
 
   .md\:grid-cols-2 {
