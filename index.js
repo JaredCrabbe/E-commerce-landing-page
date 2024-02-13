@@ -4,9 +4,9 @@ const initApp = () => {
   const header = document.querySelector("#header");
   const itemClassName = "carousel-card";
   let items = document.getElementsByClassName(itemClassName);
-  let totalItems = items.length;
+  let totalItems = items.length - 1;
   let activeSlide = 0;
-  let moving = false;
+  let isMoving = false;
 
   const nextBtn = document.getElementById("next");
   const prevBtn = document.getElementById("prev");
@@ -23,14 +23,14 @@ const initApp = () => {
 
     if (direction === "right") {
       console.log("parameter -> move Right");
-      positionX = Math.floor(singleItemWidth * activeSlide);
+      positionX = Math.floor(singleItemWidth * (activeSlide + 1));
       console.log(
         `positionX = singleItemWidth:${singleItemWidth} *
         activeSlide:${activeSlide} = positionX:${positionX}`
       );
     } else if (direction === "left") {
       console.log("parameter <- move left");
-      positionX = Math.floor(singleItemWidth * activeSlide + 1);
+      positionX = Math.floor(positionX - singleItemWidth + 1);
       console.log(
         `positionX = positionX - singleItemWidth:${singleItemWidth} *
         activeSlide:${activeSlide} = positionX:${positionX}`
@@ -40,14 +40,34 @@ const initApp = () => {
   }
 
   nextBtn.onclick = function() {
-    moveCards(-getNewPosition("right"));
-    activeSlide = (activeSlide + 1) % totalItems;
-    console.log(`activeSlide + 1 = ${activeSlide}`);
+    if (isMoving) return;
+    isMoving = true;
+    if (activeSlide === totalItems - 1) {
+      console.log("cant go right anymore");
+      isMoving = false;
+    } else {
+      moveCards(-getNewPosition("right"));
+      activeSlide = activeSlide + 1;
+      console.log(`activeSlide + 1 = ${activeSlide}`);
+      setTimeout(() => {
+        isMoving = false;
+      }, 200);
+    }
   };
   prevBtn.onclick = function() {
-    moveCards(-getNewPosition("left"));
-    activeSlide = (activeSlide - 1 + totalItems) % totalItems;
-    console.log(`activeSlide - 1 = ${activeSlide}`);
+    if (isMoving) return;
+    isMoving = true;
+    if (activeSlide === 0) {
+      console.log("cant go left anymore");
+      isMoving = false;
+    } else {
+      moveCards(-getNewPosition("left"));
+      activeSlide = activeSlide - 1;
+      console.log(`activeSlide - 1 = ${activeSlide}`);
+      setTimeout(() => {
+        isMoving = false;
+      }, 200);
+    }
   };
 
   const moveCards = amount => {
